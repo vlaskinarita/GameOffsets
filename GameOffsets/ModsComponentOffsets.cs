@@ -38,7 +38,7 @@ public struct ModsComponentOffsets
 	public NativePtrArray enchantMods;
 
 	[FieldOffset(264)]
-	public NativePtrArray ScourgeModsArray;
+	public NativePtrArray ScourgeMods;
 
 	[FieldOffset(288)]
 	public NativePtrArray crucibleMods;

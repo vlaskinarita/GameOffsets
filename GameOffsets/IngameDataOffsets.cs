@@ -27,21 +27,27 @@ public struct IngameDataOffsets
 	[FieldOffset(848)]
 	public long IngameStatePtr2;
 
-	[FieldOffset(2128)]
+	[FieldOffset(2072)]
+	public StdVector EffectEnvironments;
+
+	[FieldOffset(2120)]
 	public long ServerData;
 
-	[FieldOffset(2136)]
+	[FieldOffset(2128)]
 	public long LocalPlayer;
 
-	[FieldOffset(2312)]
+	[FieldOffset(2304)]
 	public long EntityList;
 
-	[FieldOffset(2320)]
+	[FieldOffset(2312)]
 	public long EntitiesCount;
 
-	[FieldOffset(2728)]
+	[FieldOffset(2720)]
 	public TerrainData Terrain;
 
 	[FieldOffset(2632)]
 	public NativePtrArray TgtArray;
+
+	[FieldOffset(3616)]
+	public long EnvironmentDataPtr;
 }

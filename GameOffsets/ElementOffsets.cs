@@ -54,6 +54,9 @@ public struct ElementOffsets
 	[FieldOffset(384)]
 	public Vector2 Size;
 
+	[FieldOffset(499)]
+	public byte ShinyHighlightState;
+
 	[FieldOffset(744)]
 	public NativeUtf16Text Text;
 

@@ -13,11 +13,26 @@ public struct PositionedComponentOffsets
 	[FieldOffset(480)]
 	public byte Reaction;
 
+	[FieldOffset(485)]
+	public int Size;
+
+	[FieldOffset(520)]
+	public Vector2i RawVelocity;
+
+	[FieldOffset(572)]
+	public float SpeedReverseFactor;
+
 	[FieldOffset(580)]
 	public Vector2 PrevPosition;
 
-	[FieldOffset(592)]
-	public Vector2 RelativeCoord;
+	[FieldOffset(588)]
+	public Vector2 TravelStart;
+
+	[FieldOffset(612)]
+	public Vector2 TravelOffset;
+
+	[FieldOffset(640)]
+	public float TravelProgress;
 
 	[FieldOffset(656)]
 	public Vector2i GridPosition;
@@ -27,9 +42,6 @@ public struct PositionedComponentOffsets
 
 	[FieldOffset(684)]
 	public float Scale;
-
-	[FieldOffset(485)]
-	public int Size;
 
 	[FieldOffset(692)]
 	public Vector2 WorldPosition;
