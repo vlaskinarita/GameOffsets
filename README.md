@@ -11,3 +11,12 @@ So I will post here, if possible, all the changes they make. This way it will be
 
 Access to the current version is paid - subscribe to my [bousti](https://boosty.to/gameassist)https://boosty.to/gameassist  for Base [5$].
 
+Офсеты, полученне путем декомпиляции части приложения https://www.ownedcore.com/forums/mmo/path-of-exile/poe-bots-programs/980571-poehelper-exileapi-3-20-forbidden-sanctum.html
+которое распространяется в виде незашифрованного dll через https://github.com/TehCheat/PoEHelper
+
+Эти ребята проводят хорошую работу, возможно даже коллективно, за что им респект. 
+
+Однако как люди они подонки и законченые сволочи. Так что я буду выкладывать тут, по возможности, все изменения которые они вносят. Так вам будет проще отслеживать изменения, внесенные в офсеты после последнего патча. Для этого используйте станадлртые возможности Git
+
+Досутп к актуальной версии платный   - подпишитесь на мой бусти за 5 долларов
+
