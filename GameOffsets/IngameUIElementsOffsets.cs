@@ -43,7 +43,7 @@ public struct IngameUIElementsOffsets
 
 	[FieldOffset(1408)]	public long GuildStashElement;
 
-	[FieldOffset(1416)]	public long SocialPanel;
+	[FieldOffset(1424)]	public long SocialPanel;
 
 	[FieldOffset(1464)]	public long UltimatumWorldPanel;
 
@@ -87,13 +87,13 @@ public struct IngameUIElementsOffsets
 
 	[FieldOffset(1800)]	public long LabyrinthDivineFontPanel;
 
-	[FieldOffset(1864)]	public long TrialPlaquePanel;
+	[FieldOffset(1808)]	public long TrialPlaquePanel;
 
-	[FieldOffset(1872)]	public long AscendancySelectPanel;
+	[FieldOffset(1816)]	public long AscendancySelectPanel;
 
 	[FieldOffset(1824)]	public long MapDeviceWindow;
 
-	[FieldOffset(1904)]	public long LabyrinthSelectPanel;
+	[FieldOffset(1840)]	public long LabyrinthSelectPanel;
 
 	[FieldOffset(1848)]	public long LabyrinthMapPanel;
 
@@ -151,6 +151,8 @@ public struct IngameUIElementsOffsets
 
 	[FieldOffset(2168)]	public long SanctumFloorWindow;
 
+	[FieldOffset(2184)]	public long SanctumRewardWindow;
+
 	[FieldOffset(2224)]	public long AncestorFightSelectionWindow;
 
 	[FieldOffset(2232)]	public long AncestorMainShopWindow;
@@ -181,7 +183,7 @@ public struct IngameUIElementsOffsets
 
 	[FieldOffset(2880)]	public long AncestorRightShopPanel;
 
-	[FieldOffset(2912)]	public long ItemOnGroundTooltip;
+	[FieldOffset(2928)]	public long ItemOnGroundTooltip;
 
 	[FieldOffset(0)]	public long KalandraTabletWindow;
 

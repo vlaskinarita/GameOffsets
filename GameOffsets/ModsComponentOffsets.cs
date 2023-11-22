@@ -61,7 +61,7 @@ public struct ModsComponentOffsets
 	[FieldOffset(600)]
 	public ushort IncubatorKills;
 
-	[FieldOffset(605)]
+	[FieldOffset(613)]
 	public byte IsMirrored;
 
 	[FieldOffset(606)]

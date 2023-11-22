@@ -12,23 +12,23 @@ public struct ModsRecordOffsets
 	[FieldOffset(8)]
 	public int Hash;
 
-	[FieldOffset(20)]
-	public long TypeName;
+	[FieldOffset(12)]
+	public long TypePtr;
 
 	[FieldOffset(28)]
 	public int MinLevel;
 
 	[FieldOffset(32)]
-	public long StatNames1;
+	public long Stat1Ptr;
 
 	[FieldOffset(48)]
-	public long StatNames2;
+	public long Stat2Ptr;
 
 	[FieldOffset(64)]
-	public long StatNames3;
+	public long Stat3Ptr;
 
 	[FieldOffset(80)]
-	public long StatName4;
+	public long Stat4Ptr;
 
 	[FieldOffset(96)]
 	public int Domain;
@@ -46,28 +46,16 @@ public struct ModsRecordOffsets
 	public long Something;
 
 	[FieldOffset(128)]
-	public int StatRange1;
-
-	[FieldOffset(132)]
-	public int StatRange2;
+	public Vector2i Stat1Range;
 
 	[FieldOffset(136)]
-	public int StatRange3;
-
-	[FieldOffset(140)]
-	public int StatRange4;
+	public Vector2i Stat2Range;
 
 	[FieldOffset(144)]
-	public int StatRange5;
-
-	[FieldOffset(148)]
-	public int StatRange6;
+	public Vector2i Stat3Range;
 
 	[FieldOffset(152)]
-	public int StatRange7;
-
-	[FieldOffset(156)]
-	public int StatRange8;
+	public Vector2i Stat4Range;
 
 	[FieldOffset(160)]
 	public long Tags;
@@ -95,6 +83,18 @@ public struct ModsRecordOffsets
 
 	[FieldOffset(204)]
 	public long tgcPtr;
+
+	[FieldOffset(280)]
+	public Vector2i Stat5Range;
+
+	[FieldOffset(288)]
+	public long Stat5Ptr;
+
+	[FieldOffset(385)]
+	public Vector2i Stat6Range;
+
+	[FieldOffset(393)]
+	public long Stat6Ptr;
 
 	[FieldOffset(436)]
 	public byte IsEssence;

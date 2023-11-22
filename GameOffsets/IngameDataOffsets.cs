@@ -6,10 +6,13 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IngameDataOffsets
 {
+	[FieldOffset(80)]
+	public long LabDataPtr;
+
 	[FieldOffset(136)]
 	public long CurrentArea;
 
-	[FieldOffset(168)]
+	[FieldOffset(172)]
 	public byte CurrentAreaLevel;
 
 	[FieldOffset(236)]
@@ -17,9 +20,6 @@ public struct IngameDataOffsets
 
 	[FieldOffset(256)]
 	public NativePtrArray MapStats;
-
-	[FieldOffset(280)]
-	public long LabDataPtr;
 
 	[FieldOffset(656)]
 	public long IngameStatePtr;
