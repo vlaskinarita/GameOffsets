@@ -48,6 +48,12 @@ public struct IngameDataOffsets
 	[FieldOffset(2632)]
 	public NativePtrArray TgtArray;
 
+	[FieldOffset(2656)]
+	public int MillisecondsSpentInMapBeforeZoneIn;
+
+	[FieldOffset(2664)]
+	public long ZoneInQPC;
+
 	[FieldOffset(3616)]
 	public long EnvironmentDataPtr;
 }

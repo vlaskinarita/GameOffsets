@@ -22,9 +22,14 @@ public enum ShortcutUsage
 	Skill11 = 17,
 	Skill12 = 18,
 	Skill13 = 19,
+	SkillTree = 39,
+	Atlas = 40,
+	AtlasTree = 41,
 	LeagueInterface = 43,
 	LeaguePanel = 44,
-	StalkerSentinel = 59,
-	PandemoniumSentinel = 60,
-	ApexSentinel = 61
+	ToggleDebug = 50,
+	ItemPickup = 51,
+	StalkerSentinel = 62,
+	PandemoniumSentinel = 63,
+	ApexSentinel = 64
 }

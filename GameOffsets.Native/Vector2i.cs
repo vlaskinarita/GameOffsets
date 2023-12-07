@@ -214,6 +214,14 @@ public struct Vector2i : IEquatable<Vector2i>
 		};
 	}
 
+	public static Vector2i Multiply(Vector2i v1, Vector2i v2)
+	{
+		Vector2i result = default(Vector2i);
+		result.X = v1.X * v2.X;
+		result.Y = v1.Y * v2.Y;
+		return result;
+	}
+
 	public static void Multiply(ref Vector2i v1, float scalar, out Vector2i result)
 	{
 		result = new Vector2i
