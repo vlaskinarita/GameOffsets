@@ -15,10 +15,10 @@ public struct EntityOffsets
 	[FieldOffset(16)]
 	public StdVector ComponentList;
 
-	[FieldOffset(96)]
+	[FieldOffset(144)]
 	public uint Id;
 
-	[FieldOffset(112)]
+	[FieldOffset(148)]
 	public EntityFlags Flags;
 
 	public override string ToString()

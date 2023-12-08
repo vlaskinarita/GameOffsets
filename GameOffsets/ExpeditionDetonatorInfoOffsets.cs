@@ -6,7 +6,7 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit)]
 public struct ExpeditionDetonatorInfoOffsets
 {
-	public const int ExpeditionDetonatorInfoOffset = 632;
+	public const int ExpeditionDetonatorInfoOffset = 648;
 
 	[FieldOffset(432)]
 	public long PlacementMarkerPtr;

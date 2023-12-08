@@ -14,6 +14,6 @@ public struct BuffOffsets
 	[FieldOffset(28)]
 	public float Timer;
 
-	[FieldOffset(62)]
+	[FieldOffset(66)]
 	public ushort Charges;
 }

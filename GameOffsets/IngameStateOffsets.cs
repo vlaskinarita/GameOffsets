@@ -16,30 +16,30 @@ public struct IngameStateOffsets
 	[FieldOffset(160)]
 	public long EntityLabelMap;
 
-	[FieldOffset(672)]
+	[FieldOffset(800)]
 	public long UIRoot;
 
-	[FieldOffset(728)]
+	[FieldOffset(856)]
 	public long UIHoverElement;
 
-	[FieldOffset(736)]
+	[FieldOffset(864)]
 	public Vector2 CurentUIElementPos;
 
-	[FieldOffset(744)]
+	[FieldOffset(872)]
 	public long UIHover;
 
-	[FieldOffset(784)]
+	[FieldOffset(912)]
 	public Vector2i MouseGlobal;
 
-	[FieldOffset(796)]
+	[FieldOffset(924)]
 	public Vector2 UIHoverPos;
 
-	[FieldOffset(804)]
+	[FieldOffset(932)]
 	public Vector2 MouseInGame;
 
-	[FieldOffset(1320)]
+	[FieldOffset(1448)]
 	public float TimeInGameF;
 
-	[FieldOffset(1384)]
+	[FieldOffset(1512)]
 	public long IngameUi;
 }

@@ -5,9 +5,9 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TooltipItemFrameElementOffsets
 {
-	[FieldOffset(640)]
+	[FieldOffset(656)]
 	public long CopyTextPtr;
 
-	[FieldOffset(672)]
+	[FieldOffset(688)]
 	public bool IsAdvancedTooltipText;
 }

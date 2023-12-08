@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 namespace GameOffsets;
@@ -7,7 +6,7 @@ namespace GameOffsets;
 public struct ComponentLookUpStruct
 {
 	[FieldOffset(48)]
-	public IntPtr ComponentArray;
+	public nint ComponentArray;
 
 	[FieldOffset(56)]
 	public long Capacity;

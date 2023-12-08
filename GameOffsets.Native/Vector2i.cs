@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.Numerics;
+using SharpDX;
 
 namespace GameOffsets.Native;
 
@@ -63,10 +64,21 @@ public struct Vector2i : IEquatable<Vector2i>
 		return DistanceSqr(ref this, ref v);
 	}
 
-
-	public System.Numerics.Vector2 ToVector2Num()
+	public Vector3 ToVector3()
 	{
-		return new System.Numerics.Vector2(X, Y);
+		//IL_0013: Unknown result type (might be due to invalid IL or missing references)
+		return new Vector3((float)X, (float)Y, 0f);
+	}
+
+	public Vector2 ToVector2()
+	{
+		//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+		return new Vector2((float)X, (float)Y);
+	}
+
+	public Vector2 ToVector2Num()
+	{
+		return new Vector2(X, Y);
 	}
 
 	public bool Equals(Vector2i other)
@@ -172,7 +184,7 @@ public struct Vector2i : IEquatable<Vector2i>
 		return result;
 	}
 
-	public static implicit operator System.Numerics.Vector2(Vector2i vector)
+	public static implicit operator Vector2(Vector2i vector)
 	{
 		return vector.ToVector2Num();
 	}

@@ -24,7 +24,7 @@ public struct EnvironmentDataOffsets
 
 	public const int Type3Offset = 760;
 
-	public const int Type4Count = 10;
+	public const int Type4Count = 9;
 
 	public const int Type4Size = 2;
 
@@ -66,7 +66,7 @@ public struct EnvironmentDataOffsets
 
 	public const int Type10Offset = 2064;
 
-	[FieldOffset(1080)]
+	[FieldOffset(1072)]
 	public StdVector DefaultSettingsList;
 
 	[FieldOffset(1232)]
@@ -75,7 +75,7 @@ public struct EnvironmentDataOffsets
 	[FieldOffset(5424)]
 	public StdVector FootstepAudioList;
 
-	public const int FirstInlineValueListOffset = 1296;
+	public const int FirstInlineValueListOffset = 1288;
 
-	public const int SecondInlineValueListOffset = 3392;
+	public const int SecondInlineValueListOffset = 3384;
 }

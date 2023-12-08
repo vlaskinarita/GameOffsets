@@ -10,5 +10,5 @@ public struct EntityLabelMapOffsets
 
 	public const int LabelPtrOffset = 448;
 
-	public const int LabelOffset = 744;
+	public const int LabelOffset = 760;
 }

@@ -7,22 +7,22 @@ public struct IngameUIElementsOffsets
 {
 	public const int CHAT_TITLE_OFFSET = 768;
 
-	public const int CHAT_INPUT_OFFSET = 840;
+	public const int CHAT_INPUT_OFFSET = 856;
 
 	public const int CHAT_BOX_OFFSET_1 = 816;
 
 	public const int CHAT_BOX_OFFSET_2 = 920;
 
-	[FieldOffset(560)]
+	[FieldOffset(576)]
 	public long GetQuests;
 
-	[FieldOffset(616)]
+	[FieldOffset(632)]
 	public long GameUI;
 
-	[FieldOffset(952)]
+	[FieldOffset(968)]
 	public long Mouse;
 
-	[FieldOffset(960)]
+	[FieldOffset(976)]
 	public long SkillBar;
 
 	[FieldOffset(960)]
@@ -34,25 +34,25 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1080)]
 	public long BanditDialog;
 
-	[FieldOffset(1128)]
+	[FieldOffset(1144)]
 	public long ChatBox;
 
-	[FieldOffset(1160)]
+	[FieldOffset(1176)]
 	public long MapSideUI;
 
 	[FieldOffset(1176)]
 	public long QuestTracker;
 
-	[FieldOffset(1312)]
+	[FieldOffset(1328)]
 	public long OpenLeftPanel;
 
-	[FieldOffset(1320)]
+	[FieldOffset(1336)]
 	public long InventoryPanel;
 
-	[FieldOffset(1320)]
+	[FieldOffset(1336)]
 	public long OpenRightPanel;
 
-	[FieldOffset(1368)]
+	[FieldOffset(1384)]
 	public long StashElement;
 
 	[FieldOffset(1376)]
@@ -64,58 +64,58 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1432)]
 	public long UltimatumWorldPanel;
 
-	[FieldOffset(1400)]
+	[FieldOffset(1416)]
 	public long TreePanel;
 
-	[FieldOffset(1416)]
+	[FieldOffset(1432)]
 	public long AtlasPanel;
 
-	[FieldOffset(1424)]
+	[FieldOffset(1440)]
 	public long AtlasSkillPanel;
 
-	[FieldOffset(1440)]
+	[FieldOffset(1456)]
 	public long SettingsPanel;
 
-	[FieldOffset(1448)]
+	[FieldOffset(1464)]
 	public long ChallengePanel;
 
-	[FieldOffset(1472)]
+	[FieldOffset(1488)]
 	public long WorldMap;
 
-	[FieldOffset(1496)]
+	[FieldOffset(1512)]
 	public long HelpWindow;
 
-	[FieldOffset(1544)]
+	[FieldOffset(1560)]
 	public long Map;
 
-	[FieldOffset(1552)]
+	[FieldOffset(1568)]
 	public long itemsOnGroundLabelRoot;
 
-	[FieldOffset(1696)]
+	[FieldOffset(1704)]
 	public long NpcDialog;
 
-	[FieldOffset(1704)]
+	[FieldOffset(1712)]
 	public long ExpeditionNpcDialog;
 
 	[FieldOffset(1720)]
 	public long QuestRewardWindow;
 
-	[FieldOffset(1728)]
+	[FieldOffset(1736)]
 	public long PurchaseWindow;
 
-	[FieldOffset(1736)]
+	[FieldOffset(1744)]
 	public long HaggleWindow;
 
-	[FieldOffset(1736)]
+	[FieldOffset(1744)]
 	public long PurchaseWindowHideout;
 
-	[FieldOffset(1744)]
+	[FieldOffset(1752)]
 	public long SellWindow;
 
-	[FieldOffset(1752)]
+	[FieldOffset(1760)]
 	public long SellWindowHideout;
 
-	[FieldOffset(1760)]
+	[FieldOffset(1768)]
 	public long TradeWindow;
 
 	[FieldOffset(1768)]
@@ -130,40 +130,40 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1792)]
 	public long AscendancySelectPanel;
 
-	[FieldOffset(1800)]
+	[FieldOffset(1808)]
 	public long MapDeviceWindow;
 
 	[FieldOffset(1816)]
 	public long LabyrinthSelectPanel;
 
-	[FieldOffset(1824)]
+	[FieldOffset(1832)]
 	public long LabyrinthMapPanel;
 
-	[FieldOffset(1872)]
+	[FieldOffset(1880)]
 	public long CardTradeWindow;
 
-	[FieldOffset(1880)]
+	[FieldOffset(1888)]
 	public long IncursionWindow;
 
-	[FieldOffset(1912)]
+	[FieldOffset(1920)]
 	public long DelveWindow;
 
-	[FieldOffset(1928)]
+	[FieldOffset(1936)]
 	public long ZanaMissionChoice;
 
-	[FieldOffset(1944)]
+	[FieldOffset(1952)]
 	public long BetrayalWindow;
 
 	[FieldOffset(1960)]
 	public long CraftBenchWindow;
 
-	[FieldOffset(1968)]
+	[FieldOffset(1976)]
 	public long UnveilWindow;
 
 	[FieldOffset(2000)]
 	public long AnointingWindow;
 
-	[FieldOffset(2024)]
+	[FieldOffset(2016)]
 	public long HorticraftingStationWindow;
 
 	[FieldOffset(2032)]
@@ -199,7 +199,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1912)]
 	public long HeistLockerWindow;
 
-	[FieldOffset(2072)]
+	[FieldOffset(2064)]
 	public long RitualWindow;
 
 	[FieldOffset(2192)]
@@ -217,58 +217,58 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(2136)]
 	public long ExpeditionLockerElement;
 
-	[FieldOffset(2160)]
+	[FieldOffset(2152)]
 	public long SanctumFloorWindow;
 
-	[FieldOffset(2176)]
+	[FieldOffset(2168)]
 	public long SanctumRewardWindow;
 
-	[FieldOffset(2216)]
+	[FieldOffset(2208)]
 	public long AncestorFightSelectionWindow;
 
-	[FieldOffset(2224)]
+	[FieldOffset(2216)]
 	public long AncestorMainShopWindow;
 
-	[FieldOffset(2336)]
+	[FieldOffset(2328)]
 	public long CurrencyShiftClickMenu;
 
 	[FieldOffset(2288)]
 	public long AreaInstanceUi;
 
-	[FieldOffset(2368)]
+	[FieldOffset(2360)]
 	public long DestroyConfirmationWindow;
 
-	[FieldOffset(2344)]
+	[FieldOffset(2336)]
 	public long PopUpWindow;
 
-	[FieldOffset(2352)]
+	[FieldOffset(2344)]
 	public long InstanceManagerPanel;
 
-	[FieldOffset(2432)]
+	[FieldOffset(2424)]
 	public long ResurrectPanel;
 
 	[FieldOffset(2456)]
 	public long LeagueMechanicButtons;
 
-	[FieldOffset(2512)]
+	[FieldOffset(2496)]
 	public long ExpeditionDetonatorElement;
 
 	[FieldOffset(2624)]
 	public long InvitesPanel;
 
-	[FieldOffset(2648)]
+	[FieldOffset(2632)]
 	public long GemLvlUpPanel;
 
 	[FieldOffset(2744)]
 	public long BlightEncounterUi;
 
-	[FieldOffset(2864)]
+	[FieldOffset(2848)]
 	public long AncestorLeftShopPanel;
 
-	[FieldOffset(2872)]
+	[FieldOffset(2856)]
 	public long AncestorRightShopPanel;
 
-	[FieldOffset(2920)]
+	[FieldOffset(2912)]
 	public long ItemOnGroundTooltip;
 
 	[FieldOffset(2144)]

@@ -5,15 +5,15 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct StashTabContainerOffsets
 {
-	[FieldOffset(2408)]
+	[FieldOffset(2424)]
 	public long TabSwitchBarPtr;
 
-	[FieldOffset(2432)]
+	[FieldOffset(2448)]
 	public long ViewAllStashesButtonPtr;
 
-	[FieldOffset(2448)]
+	[FieldOffset(2464)]
 	public long PinStashTabListButtonPtr;
 
-	[FieldOffset(2528)]
+	[FieldOffset(2544)]
 	public int VisibleStashIndex;
 }

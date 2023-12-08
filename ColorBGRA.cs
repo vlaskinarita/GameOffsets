@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+
 namespace GameOffsets;
 /// <summary>
 /// Represents a 32-bit color (4 bytes) in the form of BGRA (in byte order: B, G, B, A).

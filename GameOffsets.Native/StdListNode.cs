@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 namespace GameOffsets.Native;
@@ -6,16 +5,16 @@ namespace GameOffsets.Native;
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct StdListNode
 {
-	public IntPtr Next;
+	public nint Next;
 
-	public IntPtr Previous;
+	public nint Previous;
 }
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct StdListNode<TValue> where TValue : struct
 {
-	public IntPtr Next;
+	public nint Next;
 
-	public IntPtr Previous;
+	public nint Previous;
 
 	public TValue Data;
 }

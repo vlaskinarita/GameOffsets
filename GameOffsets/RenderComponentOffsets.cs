@@ -7,18 +7,18 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct RenderComponentOffsets
 {
-	[FieldOffset(160)]
+	[FieldOffset(168)]
 	public Vector3 Pos;
 
-	[FieldOffset(172)]
+	[FieldOffset(180)]
 	public Vector3 Bounds;
 
-	[FieldOffset(200)]
+	[FieldOffset(208)]
 	public NativeStringU Name;
 
-	[FieldOffset(232)]
+	[FieldOffset(240)]
 	public Vector3 Rotation;
 
-	[FieldOffset(260)]
+	[FieldOffset(268)]
 	public float Height;
 }

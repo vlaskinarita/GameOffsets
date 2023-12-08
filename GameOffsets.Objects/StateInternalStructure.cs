@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 namespace GameOffsets.Objects;
@@ -10,5 +9,5 @@ public struct StateInternalStructure
 	public byte StateEnumToName;
 
 	[FieldOffset(8)]
-	public IntPtr StatePtr;
+	public nint StatePtr;
 }

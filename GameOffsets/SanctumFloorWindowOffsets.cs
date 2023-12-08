@@ -5,9 +5,9 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumFloorWindowOffsets
 {
-	[FieldOffset(720)]
+	[FieldOffset(736)]
 	public long InSanctumDataPtr;
 
-	[FieldOffset(736)]
+	[FieldOffset(752)]
 	public long OutOfSanctumDataPtr;
 }

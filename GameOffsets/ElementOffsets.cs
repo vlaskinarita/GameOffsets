@@ -1,6 +1,7 @@
 using System.Numerics;
 using System.Runtime.InteropServices;
 using GameOffsets.Native;
+using SharpDX;
 
 namespace GameOffsets;
 
@@ -22,7 +23,7 @@ public struct ElementOffsets
 	public long ChildEnd;
 
 	[FieldOffset(168)]
-	public System.Numerics.Vector2 ScrollOffset;
+	public Vector2 ScrollOffset;
 
 	[FieldOffset(208)]
 	public ushort Type;
@@ -30,31 +31,31 @@ public struct ElementOffsets
 	[FieldOffset(216)]
 	public long Root;
 
-	[FieldOffset(224)]
+	[FieldOffset(192)]
 	public long Parent;
 
-	[FieldOffset(232)]
-	public System.Numerics.Vector2 Position;
+	[FieldOffset(200)]
+	public Vector2 Position;
 
-	[FieldOffset(264)]
+	[FieldOffset(344)]
 	public long Tooltip;
 
 	[FieldOffset(285)]
 	public long IsSelected;
 
-	[FieldOffset(440)]
+	[FieldOffset(456)]
 	public bool isHighlighted;
 
-	[FieldOffset(344)]
+	[FieldOffset(280)]
 	public float Scale;
 
-	[FieldOffset(352)]
+	[FieldOffset(324)]
 	public ElementFlags Flags;
 
-	[FieldOffset(384)]
-	public System.Numerics.Vector2 Size;
+	[FieldOffset(400)]
+	public Vector2 Size;
 
-	[FieldOffset(499)]
+	[FieldOffset(515)]
 	public byte ShinyHighlightState;
 
 	[FieldOffset(1232)]
@@ -66,9 +67,9 @@ public struct ElementOffsets
 	[FieldOffset(1756)]
 	public ColorBGRA LabelBackgroundColor;
 
-	[FieldOffset(744)]
+	[FieldOffset(760)]
 	public NativeUtf16Text Text;
 
-	[FieldOffset(1040)]
+	[FieldOffset(1056)]
 	public NativeUtf16Text TextNoTags;
 }

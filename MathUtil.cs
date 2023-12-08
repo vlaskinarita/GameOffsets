@@ -1,8 +1,46 @@
-﻿
+﻿using Microsoft.VisualBasic.Logging;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Numerics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GameOffsets;
 
 public static class MathUtil {
+    public static int ToRgba(this Color color) {
+        return color.R | (color.G << 8) | (color.B << 16) | (color.A << 24);
+    }
+    public static int ToAbgr(this Color color) {
+        return color.A | (color.B << 8) | (color.G << 16) | (color.R << 24);
+    }
+
+    public static Color GetFromRgba(this uint rgba) {
+        var A = (byte)((rgba >> 24) & 0xFFu);
+        var B = (byte)((rgba >> 16) & 0xFFu);
+        var G = (byte)((rgba >> 8) & 0xFFu);
+        var R = (byte)(rgba & 0xFFu);
+        return Color.FromArgb(A, R, G,B);
+    }
+   
+    public static Color FromAbgr(this uint color) {
+        var r = (byte)(color >> 24);
+        var g = (byte)(color >> 16);
+        var b = (byte)(color >> 8);
+        var a = (byte)color;
+        return Color.FromArgb(a, r, g, b);
+    }
+
+    public static Vector2 GetTopLeft(this RectangleF rect) {
+        return new Vector2(rect.Left, rect.Top);
+    }
+    public static Vector2 GetBottomRight(this RectangleF rect) {
+        return   new Vector2(rect.Right, rect.Bottom);
+    }
+
+    public static Vector2 GetCenter(this RectangleF rec) {
+        return new Vector2(rec.X + rec.Width / 2f, rec.Y + rec.Height / 2f);
+    }
+
     /// <summary>
     /// The value for which all absolute numbers smaller than are considered equal to zero.
     /// </summary>

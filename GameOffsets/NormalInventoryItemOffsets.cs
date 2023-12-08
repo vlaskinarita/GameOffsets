@@ -5,7 +5,7 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NormalInventoryItemOffsets
 {
-	[FieldOffset(880)]
+	[FieldOffset(896)]
 	public long Item;
 
 	[FieldOffset(1044)]

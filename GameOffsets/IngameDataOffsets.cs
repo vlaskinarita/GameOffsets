@@ -9,16 +9,16 @@ public struct IngameDataOffsets
 	[FieldOffset(80)]
 	public long LabDataPtr;
 
-	[FieldOffset(136)]
+	[FieldOffset(176)]
 	public long CurrentArea;
 
-	[FieldOffset(172)]
+	[FieldOffset(212)]
 	public byte CurrentAreaLevel;
 
-	[FieldOffset(236)]
+	[FieldOffset(276)]
 	public uint CurrentAreaHash;
 
-	[FieldOffset(256)]
+	[FieldOffset(296)]
 	public NativePtrArray MapStats;
 
 	[FieldOffset(656)]
@@ -27,33 +27,33 @@ public struct IngameDataOffsets
 	[FieldOffset(848)]
 	public long IngameStatePtr2;
 
-	[FieldOffset(2072)]
+	[FieldOffset(2112)]
 	public StdVector EffectEnvironments;
 
-	[FieldOffset(2120)]
+	[FieldOffset(2160)]
 	public long ServerData;
 
-	[FieldOffset(2128)]
+	[FieldOffset(2168)]
 	public long LocalPlayer;
 
-	[FieldOffset(2304)]
+	[FieldOffset(2344)]
 	public long EntityList;
 
-	[FieldOffset(2312)]
+	[FieldOffset(2352)]
 	public long EntitiesCount;
 
-	[FieldOffset(2720)]
+	[FieldOffset(2768)]
 	public TerrainData Terrain;
 
 	[FieldOffset(2632)]
 	public NativePtrArray TgtArray;
 
-	[FieldOffset(2656)]
+	[FieldOffset(2704)]
 	public int MillisecondsSpentInMapBeforeZoneIn;
 
-	[FieldOffset(2664)]
+	[FieldOffset(2712)]
 	public long ZoneInQPC;
 
-	[FieldOffset(3616)]
+	[FieldOffset(3688)]
 	public long EnvironmentDataPtr;
 }

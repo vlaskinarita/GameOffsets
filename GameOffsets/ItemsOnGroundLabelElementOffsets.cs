@@ -5,12 +5,12 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemsOnGroundLabelElementOffsets
 {
-	[FieldOffset(648)]
+	[FieldOffset(672)]
 	public long LabelOnHoverPtr;
 
-	[FieldOffset(656)]
+	[FieldOffset(680)]
 	public long ItemOnHoverPtr;
 
-	[FieldOffset(672)]
+	[FieldOffset(696)]
 	public long LabelsOnGroundListPtr;
 }

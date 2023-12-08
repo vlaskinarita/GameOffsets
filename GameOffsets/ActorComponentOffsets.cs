@@ -9,11 +9,8 @@ public struct ActorComponentOffsets
 	[FieldOffset(416)]
 	public long AnimationControllerPtr;
 
-    [FieldOffset(0x198)] 
-	public IntPtr ent_ptr; //dont use
-
-    [FieldOffset(432)]
-	public IntPtr ActionPtr;
+	[FieldOffset(432)]
+	public long ActionPtr;
 
 	[FieldOffset(528)]
 	public short ActionId;

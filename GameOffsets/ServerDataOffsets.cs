@@ -11,9 +11,9 @@ public struct ServerDataOffsets
 
 	public const int ATLAS_REGION_UPGRADES = 34930;
 
-	public const int WaypointsUnlockStateOffset = 43657;
+	public const int WaypointsUnlockStateOffset = 43897;
 
-	public const int BetrayalDataOffset2 = 1944;
+	public const int BetrayalDataOffset2 = 1952;
 
 	public const int AtlasPassivesListOffset = 352;
 
@@ -22,31 +22,34 @@ public struct ServerDataOffsets
 	[FieldOffset(0)]
 	public long MasterAreas;
 
-	[FieldOffset(7336)]
-	public long PlayerRelatedData;
-
-	[FieldOffset(7344)]
-	public long AtlasTreeContainerPtr;
-
-	[FieldOffset(7360)]
-	public byte NetworkState;
-
-	[FieldOffset(7400)]
-	public NativeStringU League;
-
-	[FieldOffset(7520)]
-	public int TimeInGame;
+	[FieldOffset(0)]
+	public StdVector AncestorFightInfoList;
 
 	[FieldOffset(7528)]
-	public int TimeInGame2;
+	public long PlayerRelatedData;
+
+	[FieldOffset(7536)]
+	public long AtlasTreeContainerPtr;
 
 	[FieldOffset(7552)]
+	public byte NetworkState;
+
+	[FieldOffset(7592)]
+	public NativeStringU League;
+
+	[FieldOffset(7712)]
+	public int TimeInGame;
+
+	[FieldOffset(7720)]
+	public int TimeInGame2;
+
+	[FieldOffset(7744)]
 	public int Latency;
 
-	[FieldOffset(7560)]
+	[FieldOffset(7752)]
 	public NativePtrArray PlayerStashTabs;
 
-	[FieldOffset(7584)]
+	[FieldOffset(7776)]
 	public NativePtrArray GuildStashTabs;
 
 	[FieldOffset(5816)]
@@ -64,78 +67,75 @@ public struct ServerDataOffsets
 	[FieldOffset(5881)]
 	public bool PartyDownscaleDisabled;
 
-	[FieldOffset(7445)]
+	[FieldOffset(7637)]
 	public byte EaterOfWorldsCounter;
 
-	[FieldOffset(7446)]
+	[FieldOffset(7638)]
 	public byte SearingExarchCounter;
 
-	[FieldOffset(8192)]
+	[FieldOffset(8384)]
 	public long GuildName;
 
-	[FieldOffset(8232)]
+	[FieldOffset(8448)]
 	public SkillBarIdsStruct SkillBarIds;
 
-	[FieldOffset(8260)]
+	[FieldOffset(8476)]
 	public Vector2 WorldMousePosition;
 
-	[FieldOffset(8280)]
+	[FieldOffset(8496)]
 	public long QuestFlagsPtr;
 
-	[FieldOffset(8328)]
+	[FieldOffset(8544)]
 	public NativePtrArray NearestPlayers;
 
 	[FieldOffset(7200)]
 	public NativePtrArray EntityEffects;
 
-	[FieldOffset(9072)]
+	[FieldOffset(9296)]
 	public NativePtrArray PlayerInventories;
 
-	[FieldOffset(9768)]
+	[FieldOffset(10000)]
 	public NativePtrArray NPCInventories;
 
-	[FieldOffset(10464)]
+	[FieldOffset(10704)]
 	public NativePtrArray GuildInventories;
 
-	[FieldOffset(10824)]
+	[FieldOffset(11064)]
 	public ushort TradeChatChannel;
 
-	[FieldOffset(10832)]
+	[FieldOffset(11072)]
 	public ushort GlobalChatChannel;
 
-	[FieldOffset(10992)]
+	[FieldOffset(11232)]
 	public ushort LastActionId;
 
 	[FieldOffset(9952)]
 	public int CompletedMapsCount;
 
-	[FieldOffset(10920)]
-	public StdVector AncestorFightInfoList;
-
-	[FieldOffset(11160)]
+	[FieldOffset(11400)]
 	public long CompletedMaps;
 
-	[FieldOffset(11224)]
+	[FieldOffset(11464)]
 	public long BonusCompletedAreas;
 
-	[FieldOffset(11848)]
+	[FieldOffset(13000)]
 	public int DialogDepth;
 
 	[FieldOffset(11724)]
 	public byte MonsterLevel;
 
-	[FieldOffset(11853)]
+	[FieldOffset(13005)]
 	public byte MonstersRemaining;
 
-	[FieldOffset(12034)]
+	[FieldOffset(13186)]
 	public int CurrentAzuriteAmount;
 
-	[FieldOffset(12050)]
+	[FieldOffset(13202)]
 	public ushort CurrentSulphiteAmount;
 
 	[FieldOffset(11296)]
 	public NativePtrArray BlightLanes;
 
-	[FieldOffset(12624)]
+	[FieldOffset(13776)]
 	public ServerDataArtifacts Artifacts;
 }
