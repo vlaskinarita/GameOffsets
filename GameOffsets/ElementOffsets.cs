@@ -1,7 +1,6 @@
 using System.Numerics;
 using System.Runtime.InteropServices;
 using GameOffsets.Native;
-using SharpDX;
 
 namespace GameOffsets;
 

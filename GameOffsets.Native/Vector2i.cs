@@ -1,7 +1,6 @@
 using System;
 using System.Globalization;
 using System.Numerics;
-using SharpDX;
 
 namespace GameOffsets.Native;
 
@@ -64,15 +63,6 @@ public struct Vector2i : IEquatable<Vector2i>
 		return DistanceSqr(ref this, ref v);
 	}
 
-	public SharpDX.Vector3 ToVector3()
-	{
-		return new SharpDX.Vector3(X, Y, 0f);
-	}
-
-	public SharpDX.Vector2 ToVector2()
-	{
-		return new SharpDX.Vector2(X, Y);
-	}
 
 	public System.Numerics.Vector2 ToVector2Num()
 	{
