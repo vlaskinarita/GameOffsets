@@ -58,13 +58,13 @@ public struct ElementOffsets
 	[FieldOffset(515)]
 	public byte ShinyHighlightState;
 
-	[FieldOffset(1232)]
+	[FieldOffset(1248)]
 	public ColorBGRA LabelTextColor;
 
-	[FieldOffset(440)]
+	[FieldOffset(456)]
 	public ColorBGRA LabelBorderColor;
 
-	[FieldOffset(1756)]
+	[FieldOffset(1772)]
 	public ColorBGRA LabelBackgroundColor;
 
 	[FieldOffset(760)]

@@ -16,4 +16,6 @@ public struct NativeUtf8Text
 
 	[FieldOffset(24)]
 	public int LengthWithNullTerminator;
+
+	public string CacheString => $"{Buffer:X16}_{Reserved8Bytes:X16}_{Length}";
 }

@@ -88,6 +88,9 @@ public struct ServerDataOffsets
 	[FieldOffset(8544)]
 	public NativePtrArray NearestPlayers;
 
+	[FieldOffset(8592)]
+	public StdVector MinimapIcons;
+
 	[FieldOffset(7200)]
 	public NativePtrArray EntityEffects;
 
@@ -121,7 +124,7 @@ public struct ServerDataOffsets
 	[FieldOffset(13000)]
 	public int DialogDepth;
 
-	[FieldOffset(11724)]
+	[FieldOffset(13004)]
 	public byte MonsterLevel;
 
 	[FieldOffset(13005)]
@@ -132,6 +135,15 @@ public struct ServerDataOffsets
 
 	[FieldOffset(13202)]
 	public ushort CurrentSulphiteAmount;
+
+	[FieldOffset(15344)]
+	public ushort CurrentWildWisps;
+
+	[FieldOffset(15346)]
+	public ushort CurrentVividWisps;
+
+	[FieldOffset(15348)]
+	public ushort CurrentPrimalWisps;
 
 	[FieldOffset(11296)]
 	public NativePtrArray BlightLanes;

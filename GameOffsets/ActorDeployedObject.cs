@@ -6,14 +6,14 @@ namespace GameOffsets;
 public struct ActorDeployedObject
 {
 	[FieldOffset(0)]
-	public ushort Unknown1;
+	public ushort do_id;
 
 	[FieldOffset(2)]
 	public ushort SkillId;
 
 	[FieldOffset(4)]
-	public ushort ObjectId;
+	public ushort ObjectId; //InstanceId
 
-	[FieldOffset(6)]
-	public ushort Unknown2;
+    [FieldOffset(6)]
+	public ushort Padding;
 }

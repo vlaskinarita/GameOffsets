@@ -12,18 +12,18 @@ public struct StdVector
 
 	public long End;
 
-	public long TotalElements(int elementSize)
+	public readonly long TotalElements(int elementSize)
 	{
 		return (Last - First) / elementSize;
 	}
 
-	public long ElementCount<T>() where T : unmanaged
+	public readonly long ElementCount<T>() where T : unmanaged
 	{
 		return TotalElements(Unsafe.SizeOf<T>());
 	}
 
 	public override string ToString()
 	{
-		return $"First: {First:X} - Last: {Last:X} - Size (bytes): {TotalElements(1)}";
+		return $"{First:X} - {Last:X} - {TotalElements(1)}";
 	}
 }

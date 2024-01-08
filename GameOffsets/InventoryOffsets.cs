@@ -14,6 +14,9 @@ public struct InventoryOffsets
 
 	public const int BlightServerInventoryOffset = 976;
 
+	[FieldOffset(592)]
+	public int ItemHoverState;
+
 	[FieldOffset(600)]
 	public long HoverItem;
 
@@ -21,19 +24,7 @@ public struct InventoryOffsets
 	public Vector2i FakePos;
 
 	[FieldOffset(616)]
-	public int XFake;
-
-	[FieldOffset(620)]
-	public int YFake;
-
-	[FieldOffset(616)]
 	public Vector2i RealPos;
-
-	[FieldOffset(624)]
-	public int XReal;
-
-	[FieldOffset(628)]
-	public int YReal;
 
 	[FieldOffset(632)]
 	public int CursorInInventory;
@@ -44,6 +35,6 @@ public struct InventoryOffsets
 	[FieldOffset(1296)]
 	public Vector2i InventorySize;
 
-	[FieldOffset(1148)]
-	public int TotalBoxesInInventoryRow;
+	[FieldOffset(1336)]
+	public long CursorPtr;
 }

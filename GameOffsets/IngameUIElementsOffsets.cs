@@ -5,13 +5,13 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IngameUIElementsOffsets
 {
-	public const int CHAT_TITLE_OFFSET = 768;
+	public const int CHAT_TITLE_OFFSET = 784;
 
 	public const int CHAT_INPUT_OFFSET = 856;
 
-	public const int CHAT_BOX_OFFSET_1 = 816;
+	public const int CHAT_BOX_OFFSET_1 = 832;
 
-	public const int CHAT_BOX_OFFSET_2 = 920;
+	public const int CHAT_BOX_OFFSET_2 = 936;
 
 	[FieldOffset(576)]
 	public long GetQuests;
@@ -28,10 +28,10 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(960)]
 	public long HiddenSkillBar;
 
-	[FieldOffset(976)]
+	[FieldOffset(992)]
 	public long PartyElement;
 
-	[FieldOffset(1080)]
+	[FieldOffset(1064)]
 	public long BanditDialog;
 
 	[FieldOffset(1144)]
@@ -58,7 +58,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1376)]
 	public long GuildStashElement;
 
-	[FieldOffset(1392)]
+	[FieldOffset(1408)]
 	public long SocialPanel;
 
 	[FieldOffset(1432)]
@@ -97,7 +97,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1712)]
 	public long ExpeditionNpcDialog;
 
-	[FieldOffset(1720)]
+	[FieldOffset(1728)]
 	public long QuestRewardWindow;
 
 	[FieldOffset(1736)]
@@ -118,13 +118,13 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1768)]
 	public long TradeWindow;
 
-	[FieldOffset(1768)]
+	[FieldOffset(1776)]
 	public long MapReceptacleWindow;
 
-	[FieldOffset(1776)]
+	[FieldOffset(1784)]
 	public long LabyrinthDivineFontPanel;
 
-	[FieldOffset(1784)]
+	[FieldOffset(1792)]
 	public long TrialPlaquePanel;
 
 	[FieldOffset(1792)]
@@ -133,7 +133,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1808)]
 	public long MapDeviceWindow;
 
-	[FieldOffset(1816)]
+	[FieldOffset(1824)]
 	public long LabyrinthSelectPanel;
 
 	[FieldOffset(1832)]
@@ -154,31 +154,31 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(1952)]
 	public long BetrayalWindow;
 
-	[FieldOffset(1960)]
+	[FieldOffset(1968)]
 	public long CraftBenchWindow;
 
 	[FieldOffset(1976)]
 	public long UnveilWindow;
 
-	[FieldOffset(2000)]
+	[FieldOffset(2008)]
 	public long AnointingWindow;
 
 	[FieldOffset(2016)]
 	public long HorticraftingStationWindow;
 
-	[FieldOffset(2032)]
+	[FieldOffset(2024)]
 	public long HeistWindow;
 
-	[FieldOffset(2040)]
+	[FieldOffset(2032)]
 	public long BlueprintWindow;
 
-	[FieldOffset(2048)]
+	[FieldOffset(2040)]
 	public long AllyEquipmentWindow;
 
-	[FieldOffset(2056)]
+	[FieldOffset(2048)]
 	public long GrandHeistWindow;
 
-	[FieldOffset(2064)]
+	[FieldOffset(2056)]
 	public long HeistLockerElement;
 
 	[FieldOffset(2008)]
@@ -202,16 +202,13 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(2064)]
 	public long RitualWindow;
 
-	[FieldOffset(2192)]
+	[FieldOffset(2080)]
 	public long UltimatumPanel;
 
-	[FieldOffset(2192)]
-	public long UltimatumProgressWindow;
-
-	[FieldOffset(2120)]
+	[FieldOffset(2088)]
 	public long ExpeditionWindow;
 
-	[FieldOffset(2128)]
+	[FieldOffset(2096)]
 	public long ExpeditionWindowEmpty;
 
 	[FieldOffset(2136)]
@@ -247,7 +244,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(2424)]
 	public long ResurrectPanel;
 
-	[FieldOffset(2456)]
+	[FieldOffset(2448)]
 	public long LeagueMechanicButtons;
 
 	[FieldOffset(2496)]
@@ -259,7 +256,7 @@ public struct IngameUIElementsOffsets
 	[FieldOffset(2632)]
 	public long GemLvlUpPanel;
 
-	[FieldOffset(2744)]
+	[FieldOffset(2752)]
 	public long BlightEncounterUi;
 
 	[FieldOffset(2848)]

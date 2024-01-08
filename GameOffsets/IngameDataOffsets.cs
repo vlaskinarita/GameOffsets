@@ -1,3 +1,4 @@
+using System.Numerics;
 using System.Runtime.InteropServices;
 using GameOffsets.Native;
 
@@ -6,7 +7,7 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IngameDataOffsets
 {
-	[FieldOffset(80)]
+	[FieldOffset(120)]
 	public long LabDataPtr;
 
 	[FieldOffset(176)]
@@ -56,4 +57,22 @@ public struct IngameDataOffsets
 
 	[FieldOffset(3688)]
 	public long EnvironmentDataPtr;
+
+	[FieldOffset(4600)]
+	public StdVector AzmeriDataArray1;
+
+	[FieldOffset(4624)]
+	public StdVector AzmeriDataArray2;
+
+	[FieldOffset(4648)]
+	public Vector2i AzmeriZoneTileDimensions;
+
+	[FieldOffset(4656)]
+	public Vector2 AzmeriZoneMinBorder;
+
+	[FieldOffset(4664)]
+	public Vector2 AzmeriZoneMaxBorder;
+
+	[FieldOffset(4672)]
+	public byte IsInsideAzmeriZone;
 }

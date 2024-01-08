@@ -8,15 +8,15 @@ public struct NormalInventoryItemOffsets
 	[FieldOffset(896)]
 	public long Item;
 
-	[FieldOffset(1044)]
+	[FieldOffset(1060)]
 	public int InventPosX;
 
-	[FieldOffset(1048)]
+	[FieldOffset(1064)]
 	public int InventPosY;
 
-	[FieldOffset(1052)]
+	[FieldOffset(1068)]
 	public int Width;
 
-	[FieldOffset(1056)]
+	[FieldOffset(1072)]
 	public int Height;
 }

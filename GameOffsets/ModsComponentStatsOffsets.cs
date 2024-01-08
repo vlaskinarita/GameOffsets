@@ -7,20 +7,20 @@ namespace GameOffsets;
 public struct ModsComponentStatsOffsets
 {
 	[FieldOffset(8)]
-	public NativePtrArray ImplicitStatsArray;
+	public StdVector ImplicitStatsArray;
 
 	[FieldOffset(72)]
-	public NativePtrArray EnchantedStatsArray;
+	public StdVector EnchantedStatsArray;
 
 	[FieldOffset(200)]
-	public NativePtrArray CrucibleStatsArray;
+	public StdVector CrucibleStatsArray;
 
 	[FieldOffset(264)]
-	public NativePtrArray ExplicitStatsArray;
+	public StdVector ExplicitStatsArray;
 
 	[FieldOffset(328)]
-	public NativePtrArray CraftedStatsArray;
+	public StdVector CraftedStatsArray;
 
 	[FieldOffset(392)]
-	public NativePtrArray FracturedStatsArray;
+	public StdVector FracturedStatsArray;
 }

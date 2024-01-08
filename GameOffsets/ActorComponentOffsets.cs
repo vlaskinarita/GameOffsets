@@ -28,5 +28,5 @@ public struct ActorComponentOffsets
 	public NativePtrArray ActorVaalSkills;
 
 	[FieldOffset(1800)]
-	public NativePtrArray DeployedObjectArray;
+	public StdVector DeployedObjectArray;
 }

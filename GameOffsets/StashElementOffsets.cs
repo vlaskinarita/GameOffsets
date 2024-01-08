@@ -5,12 +5,12 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct StashElementOffsets
 {
-	public const int StashTabContainerOffset2 = 680;
+	public const int StashTabContainerOffset2 = 648;
 
-	[FieldOffset(712)]
+	[FieldOffset(728)]
 	public long StashTitlePanelPtr;
 
-	[FieldOffset(720)]
+	[FieldOffset(736)]
 	public long ExitButtonPtr;
 
 	[FieldOffset(768)]

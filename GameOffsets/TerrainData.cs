@@ -25,7 +25,7 @@ public struct TerrainData
 	public int BytesPerRow;
 
 	[FieldOffset(260)]
-	public int TileHeightMultiplier;
+	public short TileHeightMultiplier;
 
 	private int Cols => NumCols;
 

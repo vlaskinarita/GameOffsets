@@ -15,5 +15,5 @@ public struct NativeUtf16Text
 
 	public long ByteLength => Length * 2;
 
-	public string CacheString => $"{Buffer}_{Reserved8Bytes}_{Length}";
+	public string CacheString => $"{Buffer:X16}_{Reserved8Bytes:X16}_{Length}";
 }
