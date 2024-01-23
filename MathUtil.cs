@@ -1,8 +1,6 @@
-﻿using Microsoft.VisualBasic.Logging;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Imaging;
 using System.Numerics;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GameOffsets;
 

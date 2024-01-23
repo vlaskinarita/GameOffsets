@@ -7,7 +7,7 @@ namespace GameOffsets;
 public struct ModsRecordOffsets
 {
 	[FieldOffset(0)]
-	public NativeStringU Key;
+	public long KeyPtr;
 
 	[FieldOffset(8)]
 	public int Hash;

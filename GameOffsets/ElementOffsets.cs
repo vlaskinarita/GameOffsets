@@ -25,17 +25,17 @@ public struct ElementOffsets
 	[FieldOffset(168)]
 	public Vector2 ScrollOffset;
 
-	[FieldOffset(208)]
-	public ushort Type;
+	[FieldOffset(320)]
+	public long Parent;
+
+	[FieldOffset(192)]
+	public Vector2 Position;
 
 	[FieldOffset(216)]
 	public long Root;
 
-	[FieldOffset(192)]
-	public long Parent;
-
-	[FieldOffset(200)]
-	public Vector2 Position;
+	[FieldOffset(320)]
+	public ushort Type;
 
 	[FieldOffset(344)]
 	public long Tooltip;
@@ -46,10 +46,10 @@ public struct ElementOffsets
 	[FieldOffset(456)]
 	public bool isHighlighted;
 
-	[FieldOffset(280)]
+	[FieldOffset(272)]
 	public float Scale;
 
-	[FieldOffset(324)]
+	[FieldOffset(328)]
 	public ElementFlags Flags;
 
 	[FieldOffset(400)]

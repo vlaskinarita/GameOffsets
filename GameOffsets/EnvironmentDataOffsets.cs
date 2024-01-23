@@ -69,7 +69,7 @@ public struct EnvironmentDataOffsets
 	[FieldOffset(1072)]
 	public StdVector DefaultSettingsList;
 
-	[FieldOffset(1232)]
+	[FieldOffset(1224)]
 	public StdVector ActiveEnvironmentList;
 
 	[FieldOffset(5424)]

@@ -8,7 +8,7 @@ using System.Security.Permissions;
 [assembly: AssemblyCompany("GameOffsets")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0+37d36fac646357085bbf335c2e3d97c6aa17e7ca")]
+[assembly: AssemblyInformationalVersion("1.0.0+0322a85dfd3fcd63ce5c709baddf8c00cef9f625")]
 [assembly: AssemblyProduct("GameOffsets")]
 [assembly: AssemblyTitle("GameOffsets")]
 [assembly: TargetPlatform("Windows7.0")]
