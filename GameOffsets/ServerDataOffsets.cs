@@ -34,7 +34,7 @@ public struct ServerDataOffsets
 	[FieldOffset(7680)]
 	public byte NetworkState;
 
-	[FieldOffset(7720)]
+	[FieldOffset(7704)]
 	public NativeStringU League;
 
 	[FieldOffset(7840)]
@@ -52,19 +52,19 @@ public struct ServerDataOffsets
 	[FieldOffset(7904)]
 	public NativePtrArray GuildStashTabs;
 
-	[FieldOffset(5944)]
+	[FieldOffset(8312)]
 	public NativeStringU PartyLeaderName;
 
-	[FieldOffset(5960)]
+	[FieldOffset(8328)]
 	public byte PartyStatusType;
 
-	[FieldOffset(5984)]
+	[FieldOffset(8352)]
 	public NativePtrArray CurrentParty;
 
-	[FieldOffset(6008)]
+	[FieldOffset(8376)]
 	public byte PartyAllocationType;
 
-	[FieldOffset(6009)]
+	[FieldOffset(8377)]
 	public bool PartyDownscaleDisabled;
 
 	[FieldOffset(7765)]
@@ -103,13 +103,13 @@ public struct ServerDataOffsets
 	[FieldOffset(10832)]
 	public NativePtrArray GuildInventories;
 
-	[FieldOffset(11192)]
+	[FieldOffset(11200)]
 	public ushort TradeChatChannel;
 
-	[FieldOffset(11200)]
+	[FieldOffset(11208)]
 	public ushort GlobalChatChannel;
 
-	[FieldOffset(11360)]
+	[FieldOffset(11368)]
 	public ushort LastActionId;
 
 	[FieldOffset(10080)]
@@ -121,33 +121,33 @@ public struct ServerDataOffsets
 	[FieldOffset(11592)]
 	public long BonusCompletedAreas;
 
-	[FieldOffset(13128)]
+	[FieldOffset(13144)]
 	public int DialogDepth;
 
-	[FieldOffset(13132)]
+	[FieldOffset(13148)]
 	public byte MonsterLevel;
 
-	[FieldOffset(13133)]
+	[FieldOffset(13149)]
 	public byte MonstersRemaining;
 
-	[FieldOffset(13314)]
+	[FieldOffset(13330)]
 	public int CurrentAzuriteAmount;
 
-	[FieldOffset(13330)]
+	[FieldOffset(13346)]
 	public ushort CurrentSulphiteAmount;
 
-	[FieldOffset(15472)]
+	[FieldOffset(15488)]
 	public ushort CurrentWildWisps;
 
-	[FieldOffset(15474)]
+	[FieldOffset(15490)]
 	public ushort CurrentVividWisps;
 
-	[FieldOffset(15476)]
+	[FieldOffset(15492)]
 	public ushort CurrentPrimalWisps;
 
-	[FieldOffset(11424)]
+	[FieldOffset(11440)]
 	public NativePtrArray BlightLanes;
 
-	[FieldOffset(13904)]
+	[FieldOffset(13920)]
 	public ServerDataArtifacts Artifacts;
 }

@@ -5,9 +5,9 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct ComponentArrayStructure
 {
-	public Buffer8<byte> Flags;
+	public long NamePtr;
 
-	public Buffer8<ComponentNameAndIndexStruct> Pointers;
+	public int Index;
 
-	public const byte InvalidPointerFlagValue = byte.MaxValue;
+	public int deadcode;
 }

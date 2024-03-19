@@ -23,13 +23,13 @@ public struct ElementOffsets
 	public long ChildEnd;
 
 	[FieldOffset(168)]
-	public Vector2 ScrollOffset;
+	public System.Numerics.Vector2 ScrollOffset;
 
 	[FieldOffset(320)]
 	public long Parent;
 
 	[FieldOffset(192)]
-	public Vector2 Position;
+	public System.Numerics.Vector2 Position;
 
 	[FieldOffset(216)]
 	public long Root;
@@ -53,7 +53,7 @@ public struct ElementOffsets
 	public ElementFlags Flags;
 
 	[FieldOffset(400)]
-	public Vector2 Size;
+	public System.Numerics.Vector2 Size;
 
 	[FieldOffset(515)]
 	public byte ShinyHighlightState;

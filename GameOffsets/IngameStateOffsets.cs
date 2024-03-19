@@ -7,39 +7,39 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IngameStateOffsets
 {
-	[FieldOffset(24)]
+	[FieldOffset(536)]
 	public long Data;
 
-	[FieldOffset(120)]
+	[FieldOffset(632)]
 	public long WorldData;
 
-	[FieldOffset(160)]
+	[FieldOffset(672)]
 	public long EntityLabelMap;
 
-	[FieldOffset(800)]
+	[FieldOffset(1312)]
 	public long UIRoot;
 
-	[FieldOffset(856)]
+	[FieldOffset(1368)]
 	public long UIHoverElement;
 
-	[FieldOffset(864)]
+	[FieldOffset(1376)]
 	public Vector2 CurentUIElementPos;
 
-	[FieldOffset(872)]
+	[FieldOffset(1384)]
 	public long UIHover;
 
-	[FieldOffset(912)]
+	[FieldOffset(1424)]
 	public Vector2i MouseGlobal;
 
-	[FieldOffset(924)]
+	[FieldOffset(1436)]
 	public Vector2 UIHoverPos;
 
-	[FieldOffset(932)]
+	[FieldOffset(1444)]
 	public Vector2 MouseInGame;
 
-	[FieldOffset(1448)]
+	[FieldOffset(1960)]
 	public float TimeInGameF;
 
-	[FieldOffset(1512)]
+	[FieldOffset(2024)]
 	public long IngameUi;
 }

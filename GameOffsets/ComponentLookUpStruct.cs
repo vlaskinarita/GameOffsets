@@ -5,9 +5,12 @@ namespace GameOffsets;
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ComponentLookUpStruct
 {
-	[FieldOffset(48)]
+	[FieldOffset(40)]
 	public nint ComponentArray;
 
-	[FieldOffset(56)]
+	[FieldOffset(72)]
 	public long Capacity;
+
+	[FieldOffset(80)]
+	public long Count;
 }

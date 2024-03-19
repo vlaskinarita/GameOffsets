@@ -12,6 +12,8 @@
   <PropertyGroup />
   <ItemGroup />
   <ItemGroup>
-    <Reference Include="SharpDX.Mathematics" />
+    <Reference Include="SharpDX.Mathematics">
+      <HintPath>SharpDX.Mathematics.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -22,10 +22,10 @@ public struct IngameDataOffsets
 	[FieldOffset(296)]
 	public NativePtrArray MapStats;
 
-	[FieldOffset(656)]
+	[FieldOffset(696)]
 	public long IngameStatePtr;
 
-	[FieldOffset(848)]
+	[FieldOffset(888)]
 	public long IngameStatePtr2;
 
 	[FieldOffset(2112)]

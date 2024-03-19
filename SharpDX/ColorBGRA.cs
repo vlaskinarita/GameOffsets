@@ -4,12 +4,13 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace GameOffsets;
+namespace GameOffsets.SharpDX;
 /// <summary>
 /// Represents a 32-bit color (4 bytes) in the form of BGRA (in byte order: B, G, B, A).
 /// </summary>
 [StructLayout(LayoutKind.Sequential, Size = 4)]
-public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
+public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable
+{
     private const string toStringFormat = "A:{0} R:{1} G:{2} B:{3}";
 
     /// <summary>
@@ -36,7 +37,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Initializes a new instance of the <see cref="ColorBGRA"/> struct.
     /// </summary>
     /// <param name="value">The value that will be assigned to all components.</param>
-    public ColorBGRA(byte value) {
+    public ColorBGRA(byte value)
+    {
         A = R = G = B = value;
     }
 
@@ -44,7 +46,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Initializes a new instance of the <see cref="ColorBGRA"/> struct.
     /// </summary>
     /// <param name="value">The value that will be assigned to all components.</param>
-    public ColorBGRA(float value) {
+    public ColorBGRA(float value)
+    {
         A = R = G = B = ToByte(value);
     }
 
@@ -55,7 +58,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="green">The green component of the color.</param>
     /// <param name="blue">The blue component of the color.</param>
     /// <param name="alpha">The alpha component of the color.</param>
-    public ColorBGRA(byte red, byte green, byte blue, byte alpha) {
+    public ColorBGRA(byte red, byte green, byte blue, byte alpha)
+    {
         R = red;
         G = green;
         B = blue;
@@ -69,7 +73,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="green">The green component of the color.</param>
     /// <param name="blue">The blue component of the color.</param>
     /// <param name="alpha">The alpha component of the color.</param>
-    public ColorBGRA(float red, float green, float blue, float alpha) {
+    public ColorBGRA(float red, float green, float blue, float alpha)
+    {
         R = ToByte(red);
         G = ToByte(green);
         B = ToByte(blue);
@@ -80,7 +85,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Initializes a new instance of the <see cref="ColorBGRA"/> struct.
     /// </summary>
     /// <param name="value">The red, green, blue, and alpha components of the color.</param>
-    public ColorBGRA(Vector4 value) {
+    public ColorBGRA(Vector4 value)
+    {
         R = ToByte(value.X);
         G = ToByte(value.Y);
         B = ToByte(value.Z);
@@ -92,7 +98,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The red, green, and blue components of the color.</param>
     /// <param name="alpha">The alpha component of the color.</param>
-    public ColorBGRA(Vector3 value, float alpha) {
+    public ColorBGRA(Vector3 value, float alpha)
+    {
         R = ToByte(value.X);
         G = ToByte(value.Y);
         B = ToByte(value.Z);
@@ -103,10 +110,11 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Initializes a new instance of the <see cref="ColorBGRA"/> struct.
     /// </summary>
     /// <param name="bgra">A packed integer containing all four color components in BGRA order.</param>
-    public ColorBGRA(uint bgra) {
-        A = (byte)((bgra >> 24) & 255);
-        R = (byte)((bgra >> 16) & 255);
-        G = (byte)((bgra >> 8) & 255);
+    public ColorBGRA(uint bgra)
+    {
+        A = (byte)(bgra >> 24 & 255);
+        R = (byte)(bgra >> 16 & 255);
+        G = (byte)(bgra >> 8 & 255);
         B = (byte)(bgra & 255);
     }
 
@@ -114,10 +122,11 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Initializes a new instance of the <see cref="ColorBGRA"/> struct.
     /// </summary>
     /// <param name="bgra">A packed integer containing all four color components in BGRA.</param>
-    public ColorBGRA(int bgra) {
-        A = (byte)((bgra >> 24) & 255);
-        R = (byte)((bgra >> 16) & 255);
-        G = (byte)((bgra >> 8) & 255);
+    public ColorBGRA(int bgra)
+    {
+        A = (byte)(bgra >> 24 & 255);
+        R = (byte)(bgra >> 16 & 255);
+        G = (byte)(bgra >> 8 & 255);
         B = (byte)(bgra & 255);
     }
 
@@ -127,7 +136,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="values">The values to assign to the red, green, and blue, alpha components of the color. This must be an array with four elements.</param>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
     /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
-    public ColorBGRA(float[] values) {
+    public ColorBGRA(float[] values)
+    {
         if (values == null)
             throw new ArgumentNullException("values");
         if (values.Length != 4)
@@ -145,7 +155,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="values">The values to assign to the red, green, and blue, alpha components of the color. This must be an array with four elements.</param>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
     /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
-    public ColorBGRA(byte[] values) {
+    public ColorBGRA(byte[] values)
+    {
         if (values == null)
             throw new ArgumentNullException("values");
         if (values.Length != 4)
@@ -163,10 +174,13 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <value>The value of the alpha, red, green, or blue component, depending on the index.</value>
     /// <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
     /// <returns>The value of the component at the specified index.</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-    public byte this[int index] {
-        get {
-            switch (index) {
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
+    public byte this[int index]
+    {
+        get
+        {
+            switch (index)
+            {
                 case 0: return B;
                 case 1: return G;
                 case 2: return R;
@@ -176,8 +190,10 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
             throw new ArgumentOutOfRangeException("index", "Indices for ColorBGRA run from 0 to 3, inclusive.");
         }
 
-        set {
-            switch (index) {
+        set
+        {
+            switch (index)
+            {
                 case 0: B = value; break;
                 case 1: G = value; break;
                 case 2: R = value; break;
@@ -191,33 +207,36 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Converts the color into a packed integer.
     /// </summary>
     /// <returns>A packed integer containing all four color components.</returns>
-    public int ToBgra() {
+    public int ToBgra()
+    {
         int value = B;
         value |= G << 8;
         value |= R << 16;
         value |= A << 24;
 
-        return (int)value;
+        return value;
     }
 
     /// <summary>
     /// Converts the color into a packed integer.
     /// </summary>
     /// <returns>A packed integer containing all four color components.</returns>
-    public int ToRgba() {
+    public int ToRgba()
+    {
         int value = R;
         value |= G << 8;
         value |= B << 16;
         value |= A << 24;
 
-        return (int)value;
+        return value;
     }
 
     /// <summary>
     /// Converts the color into a three component vector.
     /// </summary>
     /// <returns>A three component vector containing the red, green, and blue components of the color.</returns>
-    public Vector3 ToVector3() {
+    public Vector3 ToVector3()
+    {
         return new Vector3(R / 255.0f, G / 255.0f, B / 255.0f);
     }
 
@@ -225,7 +244,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Converts the color into a three component color.
     /// </summary>
     /// <returns>A three component color containing the red, green, and blue components of the color.</returns>
-    public Color3 ToColor3() {
+    public Color3 ToColor3()
+    {
         return new Color3(R / 255.0f, G / 255.0f, B / 255.0f);
     }
 
@@ -233,7 +253,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Converts the color into a four component vector.
     /// </summary>
     /// <returns>A four component vector containing all four color components.</returns>
-    public Vector4 ToVector4() {
+    public Vector4 ToVector4()
+    {
         return new Vector4(R / 255.0f, G / 255.0f, B / 255.0f, A / 255.0f);
     }
 
@@ -241,7 +262,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Creates an array containing the elements of the color.
     /// </summary>
     /// <returns>A four-element array containing the components of the color in BGRA order.</returns>
-    public byte[] ToArray() {
+    public byte[] ToArray()
+    {
         return new[] { B, G, R, A };
     }
 
@@ -249,10 +271,11 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Gets the brightness.
     /// </summary>
     /// <returns>The Hue-Saturation-Brightness (HSB) saturation for this <see cref="Color"/></returns>
-    public float GetBrightness() {
-        float r = (float)R / 255.0f;
-        float g = (float)G / 255.0f;
-        float b = (float)B / 255.0f;
+    public float GetBrightness()
+    {
+        float r = R / 255.0f;
+        float g = G / 255.0f;
+        float b = B / 255.0f;
 
         float max, min;
 
@@ -271,13 +294,14 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Gets the hue.
     /// </summary>
     /// <returns>The Hue-Saturation-Brightness (HSB) saturation for this <see cref="Color"/></returns>
-    public float GetHue() {
+    public float GetHue()
+    {
         if (R == G && G == B)
             return 0; // 0 makes as good an UNDEFINED value as any
 
-        float r = (float)R / 255.0f;
-        float g = (float)G / 255.0f;
-        float b = (float)B / 255.0f;
+        float r = R / 255.0f;
+        float g = G / 255.0f;
+        float b = B / 255.0f;
 
         float max, min;
         float delta;
@@ -293,18 +317,22 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
 
         delta = max - min;
 
-        if (r == max) {
+        if (r == max)
+        {
             hue = (g - b) / delta;
         }
-        else if (g == max) {
+        else if (g == max)
+        {
             hue = 2 + (b - r) / delta;
         }
-        else if (b == max) {
+        else if (b == max)
+        {
             hue = 4 + (r - g) / delta;
         }
         hue *= 60;
 
-        if (hue < 0.0f) {
+        if (hue < 0.0f)
+        {
             hue += 360.0f;
         }
         return hue;
@@ -314,10 +342,11 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// Gets the saturation.
     /// </summary>
     /// <returns>The Hue-Saturation-Brightness (HSB) saturation for this <see cref="Color"/></returns>
-    public float GetSaturation() {
-        float r = (float)R / 255.0f;
-        float g = (float)G / 255.0f;
-        float b = (float)B / 255.0f;
+    public float GetSaturation()
+    {
+        float r = R / 255.0f;
+        float g = G / 255.0f;
+        float b = B / 255.0f;
 
         float max, min;
         float l, s = 0;
@@ -333,13 +362,16 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
         // if max == min, then there is no color and
         // the saturation is zero.
         //
-        if (max != min) {
+        if (max != min)
+        {
             l = (max + min) / 2;
 
-            if (l <= .5) {
+            if (l <= .5)
+            {
                 s = (max - min) / (max + min);
             }
-            else {
+            else
+            {
                 s = (max - min) / (2 - max - min);
             }
         }
@@ -351,7 +383,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="color">A packed integer containing all four color components in BGRA order</param>
     /// <returns>A color.</returns>
-    public static ColorBGRA FromBgra(int color) {
+    public static ColorBGRA FromBgra(int color)
+    {
         return new ColorBGRA(color);
     }
 
@@ -360,7 +393,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="color">A packed integer containing all four color components in BGRA order</param>
     /// <returns>A color.</returns>
-    public static ColorBGRA FromBgra(uint color) {
+    public static ColorBGRA FromBgra(uint color)
+    {
         return new ColorBGRA(color);
     }
 
@@ -369,8 +403,9 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="color">A packed integer containing all four color components in RGBA order</param>
     /// <returns>A color.</returns>
-    public static ColorBGRA FromRgba(int color) {
-        return new ColorBGRA((byte)(color & 255), (byte)((color >> 8) & 255), (byte)((color >> 16) & 255), (byte)((color >> 24) & 255));
+    public static ColorBGRA FromRgba(int color)
+    {
+        return new ColorBGRA((byte)(color & 255), (byte)(color >> 8 & 255), (byte)(color >> 16 & 255), (byte)(color >> 24 & 255));
     }
 
     /// <summary>
@@ -378,7 +413,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="color">A packed integer containing all four color components in RGBA order</param>
     /// <returns>A color.</returns>
-    public static ColorBGRA FromRgba(uint color) {
+    public static ColorBGRA FromRgba(uint color)
+    {
         return FromRgba(unchecked((int)color));
     }
 
@@ -388,7 +424,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to add.</param>
     /// <param name="right">The second color to add.</param>
     /// <param name="result">When the method completes, completes the sum of the two colors.</param>
-    public static void Add(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result) {
+    public static void Add(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result)
+    {
         result.A = (byte)(left.A + right.A);
         result.R = (byte)(left.R + right.R);
         result.G = (byte)(left.G + right.G);
@@ -401,7 +438,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to add.</param>
     /// <param name="right">The second color to add.</param>
     /// <returns>The sum of the two colors.</returns>
-    public static ColorBGRA Add(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA Add(ColorBGRA left, ColorBGRA right)
+    {
         return new ColorBGRA(left.R + right.R, left.G + right.G, left.B + right.B, left.A + right.A);
     }
 
@@ -411,7 +449,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to subtract.</param>
     /// <param name="right">The second color to subtract.</param>
     /// <param name="result">WHen the method completes, contains the difference of the two colors.</param>
-    public static void Subtract(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result) {
+    public static void Subtract(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result)
+    {
         result.A = (byte)(left.A - right.A);
         result.R = (byte)(left.R - right.R);
         result.G = (byte)(left.G - right.G);
@@ -424,7 +463,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to subtract.</param>
     /// <param name="right">The second color to subtract</param>
     /// <returns>The difference of the two colors.</returns>
-    public static ColorBGRA Subtract(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA Subtract(ColorBGRA left, ColorBGRA right)
+    {
         return new ColorBGRA(left.R - right.R, left.G - right.G, left.B - right.B, left.A - right.A);
     }
 
@@ -434,7 +474,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to modulate.</param>
     /// <param name="right">The second color to modulate.</param>
     /// <param name="result">When the method completes, contains the modulated color.</param>
-    public static void Modulate(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result) {
+    public static void Modulate(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result)
+    {
         result.A = (byte)(left.A * right.A / 255.0f);
         result.R = (byte)(left.R * right.R / 255.0f);
         result.G = (byte)(left.G * right.G / 255.0f);
@@ -447,8 +488,9 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to modulate.</param>
     /// <param name="right">The second color to modulate.</param>
     /// <returns>The modulated color.</returns>
-    public static ColorBGRA Modulate(ColorBGRA left, ColorBGRA right) {
-        return new ColorBGRA((left.R * right.R) >> 8, (left.G * right.G) >> 8, (left.B * right.B) >> 8, (left.A * right.A) >> 8);
+    public static ColorBGRA Modulate(ColorBGRA left, ColorBGRA right)
+    {
+        return new ColorBGRA(left.R * right.R >> 8, left.G * right.G >> 8, left.B * right.B >> 8, left.A * right.A >> 8);
     }
 
     /// <summary>
@@ -457,7 +499,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color to scale.</param>
     /// <param name="scale">The amount by which to scale.</param>
     /// <param name="result">When the method completes, contains the scaled color.</param>
-    public static void Scale(ref ColorBGRA value, float scale, out ColorBGRA result) {
+    public static void Scale(ref ColorBGRA value, float scale, out ColorBGRA result)
+    {
         result.A = (byte)(value.A * scale);
         result.R = (byte)(value.R * scale);
         result.G = (byte)(value.G * scale);
@@ -470,7 +513,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color to scale.</param>
     /// <param name="scale">The amount by which to scale.</param>
     /// <returns>The scaled color.</returns>
-    public static ColorBGRA Scale(ColorBGRA value, float scale) {
+    public static ColorBGRA Scale(ColorBGRA value, float scale)
+    {
         return new ColorBGRA((byte)(value.R * scale), (byte)(value.G * scale), (byte)(value.B * scale), (byte)(value.A * scale));
     }
 
@@ -479,7 +523,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The color to negate.</param>
     /// <param name="result">When the method completes, contains the negated color.</param>
-    public static void Negate(ref ColorBGRA value, out ColorBGRA result) {
+    public static void Negate(ref ColorBGRA value, out ColorBGRA result)
+    {
         result.A = (byte)(255 - value.A);
         result.R = (byte)(255 - value.R);
         result.G = (byte)(255 - value.G);
@@ -491,7 +536,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The color to negate.</param>
     /// <returns>The negated color.</returns>
-    public static ColorBGRA Negate(ColorBGRA value) {
+    public static ColorBGRA Negate(ColorBGRA value)
+    {
         return new ColorBGRA(255 - value.R, 255 - value.G, 255 - value.B, 255 - value.A);
     }
 
@@ -502,22 +548,23 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
     /// <param name="result">When the method completes, contains the clamped value.</param>
-    public static void Clamp(ref ColorBGRA value, ref ColorBGRA min, ref ColorBGRA max, out ColorBGRA result) {
+    public static void Clamp(ref ColorBGRA value, ref ColorBGRA min, ref ColorBGRA max, out ColorBGRA result)
+    {
         byte alpha = value.A;
-        alpha = (alpha > max.A) ? max.A : alpha;
-        alpha = (alpha < min.A) ? min.A : alpha;
+        alpha = alpha > max.A ? max.A : alpha;
+        alpha = alpha < min.A ? min.A : alpha;
 
         byte red = value.R;
-        red = (red > max.R) ? max.R : red;
-        red = (red < min.R) ? min.R : red;
+        red = red > max.R ? max.R : red;
+        red = red < min.R ? min.R : red;
 
         byte green = value.G;
-        green = (green > max.G) ? max.G : green;
-        green = (green < min.G) ? min.G : green;
+        green = green > max.G ? max.G : green;
+        green = green < min.G ? min.G : green;
 
         byte blue = value.B;
-        blue = (blue > max.B) ? max.B : blue;
-        blue = (blue < min.B) ? min.B : blue;
+        blue = blue > max.B ? max.B : blue;
+        blue = blue < min.B ? min.B : blue;
 
         result = new ColorBGRA(red, green, blue, alpha);
     }
@@ -529,7 +576,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
     /// <returns>The clamped value.</returns>
-    public static ColorBGRA Clamp(ColorBGRA value, ColorBGRA min, ColorBGRA max) {
+    public static ColorBGRA Clamp(ColorBGRA value, ColorBGRA min, ColorBGRA max)
+    {
         ColorBGRA result;
         Clamp(ref value, ref min, ref max, out result);
         return result;
@@ -545,7 +593,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <remarks>
     /// Passing <paramref name="amount"/> a value of 0 will cause <paramref name="start"/> to be returned; a value of 1 will cause <paramref name="end"/> to be returned. 
     /// </remarks>
-    public static void Lerp(ref ColorBGRA start, ref ColorBGRA end, float amount, out ColorBGRA result) {
+    public static void Lerp(ref ColorBGRA start, ref ColorBGRA end, float amount, out ColorBGRA result)
+    {
         result.B = MathUtil.Lerp(start.B, end.B, amount);
         result.G = MathUtil.Lerp(start.G, end.G, amount);
         result.R = MathUtil.Lerp(start.R, end.R, amount);
@@ -562,7 +611,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <remarks>
     /// Passing <paramref name="amount"/> a value of 0 will cause <paramref name="start"/> to be returned; a value of 1 will cause <paramref name="end"/> to be returned. 
     /// </remarks>
-    public static ColorBGRA Lerp(ColorBGRA start, ColorBGRA end, float amount) {
+    public static ColorBGRA Lerp(ColorBGRA start, ColorBGRA end, float amount)
+    {
         ColorBGRA result;
         Lerp(ref start, ref end, amount, out result);
         return result;
@@ -575,7 +625,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="end">End color.</param>
     /// <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end"/>.</param>
     /// <param name="result">When the method completes, contains the cubic interpolation of the two colors.</param>
-    public static void SmoothStep(ref ColorBGRA start, ref ColorBGRA end, float amount, out ColorBGRA result) {
+    public static void SmoothStep(ref ColorBGRA start, ref ColorBGRA end, float amount, out ColorBGRA result)
+    {
         amount = MathUtil.SmoothStep(amount);
         Lerp(ref start, ref end, amount, out result);
     }
@@ -587,7 +638,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="end">End color.</param>
     /// <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end"/>.</param>
     /// <returns>The cubic interpolation of the two colors.</returns>
-    public static ColorBGRA SmoothStep(ColorBGRA start, ColorBGRA end, float amount) {
+    public static ColorBGRA SmoothStep(ColorBGRA start, ColorBGRA end, float amount)
+    {
         ColorBGRA result;
         SmoothStep(ref start, ref end, amount, out result);
         return result;
@@ -599,11 +651,12 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first source color.</param>
     /// <param name="right">The second source color.</param>
     /// <param name="result">When the method completes, contains an new color composed of the largest components of the source colorss.</param>
-    public static void Max(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result) {
-        result.A = (left.A > right.A) ? left.A : right.A;
-        result.R = (left.R > right.R) ? left.R : right.R;
-        result.G = (left.G > right.G) ? left.G : right.G;
-        result.B = (left.B > right.B) ? left.B : right.B;
+    public static void Max(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result)
+    {
+        result.A = left.A > right.A ? left.A : right.A;
+        result.R = left.R > right.R ? left.R : right.R;
+        result.G = left.G > right.G ? left.G : right.G;
+        result.B = left.B > right.B ? left.B : right.B;
     }
 
     /// <summary>
@@ -612,7 +665,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first source color.</param>
     /// <param name="right">The second source color.</param>
     /// <returns>A color containing the largest components of the source colors.</returns>
-    public static ColorBGRA Max(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA Max(ColorBGRA left, ColorBGRA right)
+    {
         ColorBGRA result;
         Max(ref left, ref right, out result);
         return result;
@@ -624,11 +678,12 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first source color.</param>
     /// <param name="right">The second source color.</param>
     /// <param name="result">When the method completes, contains an new color composed of the smallest components of the source colors.</param>
-    public static void Min(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result) {
-        result.A = (left.A < right.A) ? left.A : right.A;
-        result.R = (left.R < right.R) ? left.R : right.R;
-        result.G = (left.G < right.G) ? left.G : right.G;
-        result.B = (left.B < right.B) ? left.B : right.B;
+    public static void Min(ref ColorBGRA left, ref ColorBGRA right, out ColorBGRA result)
+    {
+        result.A = left.A < right.A ? left.A : right.A;
+        result.R = left.R < right.R ? left.R : right.R;
+        result.G = left.G < right.G ? left.G : right.G;
+        result.B = left.B < right.B ? left.B : right.B;
     }
 
     /// <summary>
@@ -637,7 +692,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first source color.</param>
     /// <param name="right">The second source color.</param>
     /// <returns>A color containing the smallest components of the source colors.</returns>
-    public static ColorBGRA Min(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA Min(ColorBGRA left, ColorBGRA right)
+    {
         ColorBGRA result;
         Min(ref left, ref right, out result);
         return result;
@@ -649,7 +705,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color whose contrast is to be adjusted.</param>
     /// <param name="contrast">The amount by which to adjust the contrast.</param>
     /// <param name="result">When the method completes, contains the adjusted color.</param>
-    public static void AdjustContrast(ref ColorBGRA value, float contrast, out ColorBGRA result) {
+    public static void AdjustContrast(ref ColorBGRA value, float contrast, out ColorBGRA result)
+    {
         result.A = value.A;
         result.R = ToByte(0.5f + contrast * (value.R / 255.0f - 0.5f));
         result.G = ToByte(0.5f + contrast * (value.G / 255.0f - 0.5f));
@@ -662,7 +719,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color whose contrast is to be adjusted.</param>
     /// <param name="contrast">The amount by which to adjust the contrast.</param>
     /// <returns>The adjusted color.</returns>
-    public static ColorBGRA AdjustContrast(ColorBGRA value, float contrast) {
+    public static ColorBGRA AdjustContrast(ColorBGRA value, float contrast)
+    {
         return new ColorBGRA(
             ToByte(0.5f + contrast * (value.R / 255.0f - 0.5f)),
             ToByte(0.5f + contrast * (value.G / 255.0f - 0.5f)),
@@ -676,7 +734,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color whose saturation is to be adjusted.</param>
     /// <param name="saturation">The amount by which to adjust the saturation.</param>
     /// <param name="result">When the method completes, contains the adjusted color.</param>
-    public static void AdjustSaturation(ref ColorBGRA value, float saturation, out ColorBGRA result) {
+    public static void AdjustSaturation(ref ColorBGRA value, float saturation, out ColorBGRA result)
+    {
         float grey = value.R / 255.0f * 0.2125f + value.G / 255.0f * 0.7154f + value.B / 255.0f * 0.0721f;
 
         result.A = value.A;
@@ -691,7 +750,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The color whose saturation is to be adjusted.</param>
     /// <param name="saturation">The amount by which to adjust the saturation.</param>
     /// <returns>The adjusted color.</returns>
-    public static ColorBGRA AdjustSaturation(ColorBGRA value, float saturation) {
+    public static ColorBGRA AdjustSaturation(ColorBGRA value, float saturation)
+    {
         float grey = value.R / 255.0f * 0.2125f + value.G / 255.0f * 0.7154f + value.B / 255.0f * 0.0721f;
 
         return new ColorBGRA(
@@ -706,7 +766,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The non-premultiplied value.</param>
     /// <param name="result">The premultiplied result.</param>
-    public static void Premultiply(ref ColorBGRA value, out ColorBGRA result) {
+    public static void Premultiply(ref ColorBGRA value, out ColorBGRA result)
+    {
         var a = value.A / (255f * 255f);
         result.A = value.A;
         result.R = ToByte(value.R * a);
@@ -719,7 +780,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The non-premultiplied value.</param>
     /// <returns>The premultiplied result.</returns>
-    public static ColorBGRA Premultiply(ColorBGRA value) {
+    public static ColorBGRA Premultiply(ColorBGRA value)
+    {
         ColorBGRA result;
         Premultiply(ref value, out result);
         return result;
@@ -731,7 +793,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to add.</param>
     /// <param name="right">The second color to add.</param>
     /// <returns>The sum of the two colors.</returns>
-    public static ColorBGRA operator +(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA operator +(ColorBGRA left, ColorBGRA right)
+    {
         return new ColorBGRA(left.R + right.R, left.G + right.G, left.B + right.B, left.A + right.A);
     }
 
@@ -740,7 +803,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The color to assert (unchange).</param>
     /// <returns>The asserted (unchanged) color.</returns>
-    public static ColorBGRA operator +(ColorBGRA value) {
+    public static ColorBGRA operator +(ColorBGRA value)
+    {
         return value;
     }
 
@@ -750,7 +814,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to subtract.</param>
     /// <param name="right">The second color to subtract.</param>
     /// <returns>The difference of the two colors.</returns>
-    public static ColorBGRA operator -(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA operator -(ColorBGRA left, ColorBGRA right)
+    {
         return new ColorBGRA(left.R - right.R, left.G - right.G, left.B - right.B, left.A - right.A);
     }
 
@@ -759,7 +824,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The color to negate.</param>
     /// <returns>A negated color.</returns>
-    public static ColorBGRA operator -(ColorBGRA value) {
+    public static ColorBGRA operator -(ColorBGRA value)
+    {
         return new ColorBGRA(-value.R, -value.G, -value.B, -value.A);
     }
 
@@ -769,7 +835,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="scale">The factor by which to scale the color.</param>
     /// <param name="value">The color to scale.</param>
     /// <returns>The scaled color.</returns>
-    public static ColorBGRA operator *(float scale, ColorBGRA value) {
+    public static ColorBGRA operator *(float scale, ColorBGRA value)
+    {
         return new ColorBGRA((byte)(value.R * scale), (byte)(value.G * scale), (byte)(value.B * scale), (byte)(value.A * scale));
     }
 
@@ -779,7 +846,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="value">The factor by which to scale the color.</param>
     /// <param name="scale">The color to scale.</param>
     /// <returns>The scaled color.</returns>
-    public static ColorBGRA operator *(ColorBGRA value, float scale) {
+    public static ColorBGRA operator *(ColorBGRA value, float scale)
+    {
         return new ColorBGRA((byte)(value.R * scale), (byte)(value.G * scale), (byte)(value.B * scale), (byte)(value.A * scale));
     }
 
@@ -789,7 +857,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="left">The first color to modulate.</param>
     /// <param name="right">The second color to modulate.</param>
     /// <returns>The modulated color.</returns>
-    public static ColorBGRA operator *(ColorBGRA left, ColorBGRA right) {
+    public static ColorBGRA operator *(ColorBGRA left, ColorBGRA right)
+    {
         return new ColorBGRA((byte)(left.R * right.R / 255.0f), (byte)(left.G * right.G / 255.0f), (byte)(left.B * right.B / 255.0f), (byte)(left.A * right.A / 255.0f));
     }
 
@@ -800,7 +869,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="right">The second value to compare.</param>
     /// <returns><c>true</c> if <paramref name="left"/> has the same value as <paramref name="right"/>; otherwise, <c>false</c>.</returns>
     [MethodImpl((MethodImplOptions)0x100)] // MethodImplOptions.AggressiveInlining
-    public static bool operator ==(ColorBGRA left, ColorBGRA right) {
+    public static bool operator ==(ColorBGRA left, ColorBGRA right)
+    {
         return left.Equals(ref right);
     }
 
@@ -811,7 +881,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <param name="right">The second value to compare.</param>
     /// <returns><c>true</c> if <paramref name="left"/> has a different value than <paramref name="right"/>; otherwise, <c>false</c>.</returns>
     [MethodImpl((MethodImplOptions)0x100)] // MethodImplOptions.AggressiveInlining
-    public static bool operator !=(ColorBGRA left, ColorBGRA right) {
+    public static bool operator !=(ColorBGRA left, ColorBGRA right)
+    {
         return !left.Equals(ref right);
     }
 
@@ -820,7 +891,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator Color3(ColorBGRA value) {
+    public static explicit operator Color3(ColorBGRA value)
+    {
         return new Color3(value.R, value.G, value.B);
     }
 
@@ -829,7 +901,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator Vector3(ColorBGRA value) {
+    public static explicit operator Vector3(ColorBGRA value)
+    {
         return new Vector3(value.R / 255.0f, value.G / 255.0f, value.B / 255.0f);
     }
 
@@ -838,7 +911,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator Vector4(ColorBGRA value) {
+    public static explicit operator Vector4(ColorBGRA value)
+    {
         return new Vector4(value.R / 255.0f, value.G / 255.0f, value.B / 255.0f, value.A / 255.0f);
     }
 
@@ -847,7 +921,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator Color4(ColorBGRA value) {
+    public static explicit operator Color4(ColorBGRA value)
+    {
         return new Color4(value.R / 255.0f, value.G / 255.0f, value.B / 255.0f, value.A / 255.0f);
     }
 
@@ -856,7 +931,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator ColorBGRA(Vector3 value) {
+    public static explicit operator ColorBGRA(Vector3 value)
+    {
         return new ColorBGRA(value.X / 255.0f, value.Y / 255.0f, value.Z / 255.0f, 1.0f);
     }
 
@@ -865,7 +941,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator ColorBGRA(Color3 value) {
+    public static explicit operator ColorBGRA(Color3 value)
+    {
         return new ColorBGRA(value.Red, value.Green, value.Blue, 1.0f);
     }
 
@@ -874,7 +951,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator ColorBGRA(Vector4 value) {
+    public static explicit operator ColorBGRA(Vector4 value)
+    {
         return new ColorBGRA(value.X, value.Y, value.Z, value.W);
     }
 
@@ -883,7 +961,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static explicit operator ColorBGRA(Color4 value) {
+    public static explicit operator ColorBGRA(Color4 value)
+    {
         return new ColorBGRA(value.Red, value.Green, value.Blue, value.Alpha);
     }
 
@@ -892,7 +971,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static implicit operator ColorBGRA(Color value) {
+    public static implicit operator ColorBGRA(Color value)
+    {
         return new ColorBGRA(value.R, value.G, value.B, value.A);
     }
 
@@ -901,73 +981,80 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public static implicit operator Color(ColorBGRA value) {
+    public static implicit operator Color(ColorBGRA value)
+    {
         return Color.FromArgb(value.A, value.R, value.G, value.B);
     }
 
     /// <summary>
-    /// Performs an explicit conversion from <see cref="ColorBGRA"/> to <see cref="System.Int32"/>.
+    /// Performs an explicit conversion from <see cref="ColorBGRA"/> to <see cref="int"/>.
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>
     /// The result of the conversion.
     /// </returns>
-    public static explicit operator int(ColorBGRA value) {
+    public static explicit operator int(ColorBGRA value)
+    {
         return value.ToBgra();
     }
 
     /// <summary>
-    /// Performs an explicit conversion from <see cref="System.Int32"/> to <see cref="ColorBGRA"/>.
+    /// Performs an explicit conversion from <see cref="int"/> to <see cref="ColorBGRA"/>.
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>
     /// The result of the conversion.
     /// </returns>
-    public static explicit operator ColorBGRA(int value) {
+    public static explicit operator ColorBGRA(int value)
+    {
         return new ColorBGRA(value);
     }
 
     /// <summary>
-    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// Returns a <see cref="string"/> that represents this instance.
     /// </summary>
     /// <returns>
-    /// A <see cref="System.String"/> that represents this instance.
+    /// A <see cref="string"/> that represents this instance.
     /// </returns>
-    public override string ToString() {
+    public override string ToString()
+    {
         return ToString(CultureInfo.CurrentCulture);
     }
 
     /// <summary>
-    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// Returns a <see cref="string"/> that represents this instance.
     /// </summary>
     /// <param name="format">The format to apply to each channel (byte).</param>
     /// <returns>
-    /// A <see cref="System.String"/> that represents this instance.
+    /// A <see cref="string"/> that represents this instance.
     /// </returns>
-    public string ToString(string format) {
+    public string ToString(string format)
+    {
         return ToString(format, CultureInfo.CurrentCulture);
     }
 
     /// <summary>
-    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// Returns a <see cref="string"/> that represents this instance.
     /// </summary>
     /// <param name="formatProvider">The format provider.</param>
     /// <returns>
-    /// A <see cref="System.String"/> that represents this instance.
+    /// A <see cref="string"/> that represents this instance.
     /// </returns>
-    public string ToString(IFormatProvider formatProvider) {
+    public string ToString(IFormatProvider formatProvider)
+    {
         return string.Format(formatProvider, toStringFormat, A, R, G, B);
     }
 
     /// <summary>
-    /// Returns a <see cref="System.String"/> that represents this instance.
+    /// Returns a <see cref="string"/> that represents this instance.
     /// </summary>
     /// <param name="format">The format to apply to each channel (byte).</param>
     /// <param name="formatProvider">The format provider.</param>
     /// <returns>
-    /// A <see cref="System.String"/> that represents this instance.
+    /// A <see cref="string"/> that represents this instance.
     /// </returns>
-    public string ToString(string format, IFormatProvider formatProvider) {
+    public string ToString(string format, IFormatProvider formatProvider)
+    {
         if (format == null)
             return ToString(formatProvider);
 
@@ -985,12 +1072,14 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <returns>
     /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
     /// </returns>
-    public override int GetHashCode() {
-        unchecked {
+    public override int GetHashCode()
+    {
+        unchecked
+        {
             var hashCode = B.GetHashCode();
-            hashCode = (hashCode * 397) ^ G.GetHashCode();
-            hashCode = (hashCode * 397) ^ R.GetHashCode();
-            hashCode = (hashCode * 397) ^ A.GetHashCode();
+            hashCode = hashCode * 397 ^ G.GetHashCode();
+            hashCode = hashCode * 397 ^ R.GetHashCode();
+            hashCode = hashCode * 397 ^ A.GetHashCode();
             return hashCode;
         }
     }
@@ -1003,7 +1092,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <c>true</c> if the specified <see cref="ColorBGRA"/> is equal to this instance; otherwise, <c>false</c>.
     /// </returns>
     [MethodImpl((MethodImplOptions)0x100)] // MethodImplOptions.AggressiveInlining
-    public bool Equals(ref ColorBGRA other) {
+    public bool Equals(ref ColorBGRA other)
+    {
         return R == other.R && G == other.G && B == other.B && A == other.A;
     }
 
@@ -1015,18 +1105,20 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// <c>true</c> if the specified <see cref="ColorBGRA"/> is equal to this instance; otherwise, <c>false</c>.
     /// </returns>
     [MethodImpl((MethodImplOptions)0x100)] // MethodImplOptions.AggressiveInlining
-    public bool Equals(ColorBGRA other) {
+    public bool Equals(ColorBGRA other)
+    {
         return Equals(ref other);
     }
 
     /// <summary>
-    /// Determines whether the specified <see cref="System.Object"/> is equal to this instance.
+    /// Determines whether the specified <see cref="object"/> is equal to this instance.
     /// </summary>
-    /// <param name="value">The <see cref="System.Object"/> to compare with this instance.</param>
+    /// <param name="value">The <see cref="object"/> to compare with this instance.</param>
     /// <returns>
-    /// <c>true</c> if the specified <see cref="System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+    /// <c>true</c> if the specified <see cref="object"/> is equal to this instance; otherwise, <c>false</c>.
     /// </returns>
-    public override bool Equals(object value) {
+    public override bool Equals(object value)
+    {
         if (!(value is ColorBGRA))
             return false;
 
@@ -1034,7 +1126,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
         return Equals(ref strongValue);
     }
 
-    private static byte ToByte(float component) {
+    private static byte ToByte(float component)
+    {
         var value = (int)(component * 255.0f);
         return (byte)(value < 0 ? 0 : value > 255 ? 255 : value);
     }
@@ -1044,7 +1137,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public unsafe static implicit operator RawColorBGRA(ColorBGRA value) {
+    public unsafe static implicit operator RawColorBGRA(ColorBGRA value)
+    {
         return *(RawColorBGRA*)&value;
     }
 
@@ -1053,7 +1147,8 @@ public partial struct ColorBGRA : IEquatable<ColorBGRA>, IFormattable {
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    public unsafe static implicit operator ColorBGRA(RawColorBGRA value) {
+    public unsafe static implicit operator ColorBGRA(RawColorBGRA value)
+    {
         return *(ColorBGRA*)&value;
     }
 }

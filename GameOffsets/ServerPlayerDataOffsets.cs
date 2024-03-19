@@ -9,24 +9,24 @@ public struct ServerPlayerDataOffsets
 	[FieldOffset(400)]
 	public NativePtrArray PassiveSkillIds;
 
-	[FieldOffset(608)]
+	[FieldOffset(624)]
 	public byte PlayerClass;
 
-	[FieldOffset(612)]
+	[FieldOffset(628)]
 	public int CharacterLevel;
 
-	[FieldOffset(616)]
+	[FieldOffset(632)]
 	public int PassiveRefundPointsLeft;
 
-	[FieldOffset(620)]
+	[FieldOffset(636)]
 	public int QuestPassiveSkillPoints;
 
-	[FieldOffset(624)]
+	[FieldOffset(640)]
 	public int FreePassiveSkillPointsLeft;
 
-	[FieldOffset(620)]
+	[FieldOffset(644)]
 	public int TotalAscendencyPoints;
 
-	[FieldOffset(632)]
+	[FieldOffset(652)]
 	public int SpentAscendencyPoints;
 }
